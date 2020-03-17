@@ -74,7 +74,7 @@ func del(cmd *cobra.Command, args []string) {
 			break
 		}
 
-		fmt.Println(m.GetName())
+		fmt.Fprintln(os.Stdout, m.GetName())
 		if !dryRun {
 			// delete
 			delReq := &monitoringpb.DeleteMetricDescriptorRequest{
